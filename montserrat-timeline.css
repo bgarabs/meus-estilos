@@ -60,3 +60,7 @@
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
   color: #ffffff !important;
 }
+
+tl-timegroup {
+  background-color: #fbf9fc
+}
