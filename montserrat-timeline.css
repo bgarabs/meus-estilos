@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* 1. TIPOGRAFIA MONTSERRAT EM TODOS OS TEXTOS */
+/* 1. TIPOGRAFIA MONTSERRAT EM TODOS OS TEXTOS (Sem afetar ícones) */
 .tl-timeline,
-.tl-timeline *,
 .tl-timeline .tl-headline,
 .tl-timeline .tl-headline-title,
 .tl-timeline .tl-text,
@@ -20,14 +19,24 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Preserva os ícones nativos (setas/zooms) para não virarem quadrados */
+/* Preserva a fonte dos ícones (setas laterais, botões de zoom, etc.) */
 .tl-timeline .tl-icon,
 .tl-timeline [class^="tl-icon-"],
-.tl-timeline [class*=" tl-icon-"] {
+.tl-timeline [class*=" tl-icon-"],
+.tl-slidenav-icon,
+.tl-icon-chevron-left,
+.tl-icon-chevron-right {
   font-family: 'tl-icons' !important;
 }
 
-/* Estado padrão dos itens (Fundo Lilás e Texto Preto) */
+/* Cor base dos textos de apoio (preto) */
+.tl-timeline .tl-text,
+.tl-timeline .tl-slidenav-title,
+.tl-timeline .tl-slidenav-description {
+  color: #000000 !important;
+}
+
+/* 2. ESTADO PADRÃO DOS ITENS (Fundo Lilás e Texto Preto) */
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #dfcce4 !important;
 }
@@ -37,7 +46,7 @@
   color: #000000 !important;
 }
 
-/* 2. ITEM EM HOVER (Passar o mouse) -> Fundo Roxo e Texto Branco */
+/* 3. ITEM EM HOVER (Passar o mouse) -> Fundo Roxo e Texto Branco */
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #782a90 !important;
   transition: background-color 0.2s ease-in-out;
@@ -48,7 +57,7 @@
   color: #ffffff !important;
 }
 
-/* 3. ITEM ATIVO (Selecionado) -> Fundo Roxo e Texto Branco */
+/* 4. ITEM ATIVO (Selecionado) -> Fundo Roxo e Texto Branco */
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content,
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #782a90 !important;
@@ -61,10 +70,7 @@
   color: #ffffff !important;
 }
 
+/* Fundo suave na aba de grupos superior */
 .tl-timegroup:last-child {
-  background-color: #f5eff6!important;
-}
-
-.tl-timeline, .tl-timeline *, .tl-timeline .tl-headline, .tl-timeline .tl-headline-title, .tl-timeline .tl-text, .tl-timeline .tl-text p, .tl-timeline .tl-text-content, .tl-timeline .tl-caption, .tl-timeline .tl-credit, .tl-timeline .tl-slidenav-title, .tl-timeline .tl-slidenav-description, .tl-timeline .tl-timegroup-message, .tl-timeline .tl-timeinterval, .tl-timeline .tl-timeinterval-major, .tl-timeline .tl-timeinterval-minor, .tl-timeline .tl-timeaxis-tick {
-  color: black!important;
+  background-color: #f5eff6 !important;
 }
