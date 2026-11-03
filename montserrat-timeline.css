@@ -62,7 +62,7 @@
 }
 
 .tl-timegroup:last-child {
-  background-color: #f8f4f9!important;
+  background-color: #f5eff6!important;
 }
 
 .tl-timeline, .tl-timeline *, .tl-timeline .tl-headline, .tl-timeline .tl-headline-title, .tl-timeline .tl-text, .tl-timeline .tl-text p, .tl-timeline .tl-text-content, .tl-timeline .tl-caption, .tl-timeline .tl-credit, .tl-timeline .tl-slidenav-title, .tl-timeline .tl-slidenav-description, .tl-timeline .tl-timegroup-message, .tl-timeline .tl-timeinterval, .tl-timeline .tl-timeinterval-major, .tl-timeline .tl-timeinterval-minor, .tl-timeline .tl-timeaxis-tick {
