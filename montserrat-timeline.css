@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* 1. MANTEIMOS O MONTSERRAT EM TODOS OS TEXTOS */
+/* 1. TIPOGRAFIA MONTSERRAT EM TODOS OS TEXTOS */
 .tl-timeline,
 .tl-timeline *,
 .tl-timeline .tl-headline,
@@ -20,58 +20,71 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Preserva os ícones nativos para não virarem quadrados */
+/* Preserva os ícones nativos (setas/zooms) para não virarem quadrados */
 .tl-timeline .tl-icon,
 .tl-timeline [class^="tl-icon-"],
 .tl-timeline [class*=" tl-icon-"] {
   font-family: 'tl-icons' !important;
 }
 
-/* 2. REVERTENDO O FUNDO GERAL PARA BRANCO / PADRÃO */
+/* 2. TODAS AS ABAS E PAINEIS DE NAVEGAÇÃO COM FUNDO BRANCO */
 .tl-timeline .tl-timenav,
 .tl-timeline .tl-timenav-background,
-.tl-timeline .tl-timenav-slider {
+.tl-timeline .tl-timenav-slider,
+.tl-timeline .tl-timenav .tl-timegroup {
   background-color: #ffffff !important;
 }
 
-/* ABA SUPERIOR (Diretores) -> Mantém Lilás suave (#dfcce4) */
-.tl-timeline .tl-timenav .tl-timegroup {
-  background-color: #dfcce4 !important;
-}
-
-.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
-  color: #782a90 !important;
-  font-weight: 700 !important;
-}
-
-/* Textos das datas no eixo inferior (Roxo escuro para leitura no fundo branco) */
+/* Texto dos grupos (ex: Diretores) e datas em Roxo para legibilidade */
+.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message,
 .tl-timeline .tl-timenav .tl-timeinterval-major,
 .tl-timeline .tl-timenav .tl-timeinterval-minor,
 .tl-timeline .tl-timenav .tl-timeaxis-tick {
   color: #782a90 !important;
 }
 
-/* 3. EFEITO HOVER ROXO NOS ITENS/MARCADORES */
+/* 3. COMPORTAMENTO DOS ITENS (HOVER E ATIVO) */
 
-/* Ao passar o mouse por cima de um bloco de evento */
+/* Item ao passar o mouse (Hover) -> Fundo Roxo com texto Branco */
 .tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container {
   background-color: #782a90 !important;
-  border-color: #f58220 !important; /* Borda em Laranja no hover */
+  border-color: #782a90 !important;
   transition: all 0.2s ease-in-out;
 }
 
-/* Texto dentro do bloco fica branco no hover para dar leitura */
 .tl-timeline .tl-timenav .tl-marker:hover .tl-headline,
 .tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container * {
   color: #ffffff !important;
 }
 
-/* Marcador ativo/selecionado (em Laranja permanente) */
+/* Item Ativo (Selecionado) -> Fundo Lilás com texto Roxo */
 .tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
-  background-color: #f58220 !important;
-  border-color: #f58220 !important;
+  background-color: #dfcce4 !important;
+  border-color: #782a90 !important;
 }
 
-.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-headline {
-  color: #ffffff !important;
+.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-headline,
+.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container * {
+  color: #782a90 !important;
+  font-weight: 700 !important;
+}
+
+/* 4. COR DA LINHA DO TEMPO E DAS BOLINHAS (EIXO DOS ANOS) -> LARANJA */
+
+/* A barra horizontal do eixo principal */
+.tl-timeline .tl-timenav .tl-timeaxis-background,
+.tl-timeline .tl-timenav .tl-timeaxis {
+  background-color: #f58220 !important;
+}
+
+/* As bolinhas (marcadores de ticks) no eixo dos anos */
+.tl-timeline .tl-timenav .tl-timeaxis-tick:after,
+.tl-timeline .tl-timenav .tl-timeaxis-mark {
+  background-color: #f58220 !important;
+}
+
+/* Marcação de tempo/linhas divisórias no eixo */
+.tl-timeline .tl-timenav .tl-timeaxis-major .tl-timeaxis-tick:before,
+.tl-timeline .tl-timenav .tl-timeaxis-minor .tl-timeaxis-tick:before {
+  background-color: #f58220 !important;
 }
