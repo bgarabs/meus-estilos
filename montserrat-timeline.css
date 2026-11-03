@@ -88,3 +88,14 @@
 .tl-timeline .tl-timenav .tl-timeaxis-minor .tl-timeaxis-tick:before {
   background-color: #f58220 !important;
 }
+
+/* Força um espaçamento horizontal mínimo entre cada bloco de evento */
+.tl-timeline .tl-timenav .tl-marker {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Aumenta a largura mínima dos cards de texto dos eventos */
+.tl-timeline .tl-timenav .tl-marker .tl-marker-content-container {
+  min-width: 140px !important;
+}
