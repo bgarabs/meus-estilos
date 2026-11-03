@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* 1. TIPOGRAFIA MONTSERRAT EM TODOS OS TEXTOS (Sem afetar os ícones) */
+/* 1. FORÇA MONTSERRAT EM TODOS OS TEXTOS E DATAS */
 .tl-timeline,
+.tl-timeline *,
 .tl-timeline .tl-headline,
+.tl-timeline .tl-headline-title,
 .tl-timeline .tl-text,
 .tl-timeline .tl-text p,
 .tl-timeline .tl-text-content,
-.tl-timeline .tl-headline-title,
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit,
 .tl-timeline .tl-slidenav-title,
@@ -15,18 +16,27 @@
 .tl-timeline .tl-timeinterval,
 .tl-timeline .tl-timeinterval-major,
 .tl-timeline .tl-timeinterval-minor,
-.tl-timeline .tl-timenav .tl-headline {
+.tl-timeline .tl-timeaxis-tick {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* 2. ESTRUTURA E CORES DA NAVEGAÇÃO */
+/* Preserva os ícones nativos (setas e zoom) para não quebrarem em quadrados */
+.tl-timeline .tl-icon,
+.tl-timeline [class^="tl-icon-"],
+.tl-timeline [class*=" tl-icon-"] {
+  font-family: 'tl-icons' !important;
+}
 
-/* Fundo geral da navegação (painel dos anos/eventos em Roxo) */
-.tl-timeline .tl-timenav {
+/* 2. ESTRUTURA DE CORES DA NAVEGAÇÃO */
+
+/* Fundo da barra inteira de navegação (Roxo principal #782a90) */
+.tl-timeline .tl-timenav,
+.tl-timeline .tl-timenav-background,
+.tl-timeline .tl-timenav-slider {
   background-color: #782a90 !important;
 }
 
-/* Aba superior (Diretores) em Lilás */
+/* Aba superior / Grupos (Diretores) -> Lilás suave (#dfcce4) */
 .tl-timeline .tl-timenav .tl-timegroup {
   background-color: #dfcce4 !important;
 }
@@ -36,18 +46,19 @@
   font-weight: 700 !important;
 }
 
-/* Textos das datas no eixo inferior em branco */
+/* Textos dos anos e datas na aba inferior -> Branco para dar destaque */
 .tl-timeline .tl-timenav .tl-timeinterval-major,
-.tl-timeline .tl-timenav .tl-timeinterval-minor {
+.tl-timeline .tl-timenav .tl-timeinterval-minor,
+.tl-timeline .tl-timenav .tl-timeaxis-tick {
   color: #ffffff !important;
 }
 
-/* Cor do marcador/borda em Laranja */
+/* Marcadores de eventos -> Laranja (#f58220) */
 .tl-timeline .tl-timenav .tl-marker .tl-marker-content-container {
   border-color: #f58220 !important;
 }
 
-/* Marcador ativo/selecionado em Laranja */
+/* Marcador ativo/selecionado -> Laranja (#f58220) */
 .tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
   background-color: #f58220 !important;
 }
