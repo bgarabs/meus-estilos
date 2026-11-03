@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* 1. FORÇA MONTSERRAT EM TODOS OS TEXTOS E DATAS */
+/* 1. MANTEIMOS O MONTSERRAT EM TODOS OS TEXTOS */
 .tl-timeline,
 .tl-timeline *,
 .tl-timeline .tl-headline,
@@ -20,23 +20,21 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Preserva os ícones nativos (setas e zoom) para não quebrarem em quadrados */
+/* Preserva os ícones nativos para não virarem quadrados */
 .tl-timeline .tl-icon,
 .tl-timeline [class^="tl-icon-"],
 .tl-timeline [class*=" tl-icon-"] {
   font-family: 'tl-icons' !important;
 }
 
-/* 2. ESTRUTURA DE CORES DA NAVEGAÇÃO */
-
-/* Fundo da barra inteira de navegação (Roxo principal #782a90) */
+/* 2. REVERTENDO O FUNDO GERAL PARA BRANCO / PADRÃO */
 .tl-timeline .tl-timenav,
 .tl-timeline .tl-timenav-background,
 .tl-timeline .tl-timenav-slider {
-  background-color: #782a90 !important;
+  background-color: #ffffff !important;
 }
 
-/* Aba superior / Grupos (Diretores) -> Lilás suave (#dfcce4) */
+/* ABA SUPERIOR (Diretores) -> Mantém Lilás suave (#dfcce4) */
 .tl-timeline .tl-timenav .tl-timegroup {
   background-color: #dfcce4 !important;
 }
@@ -46,19 +44,34 @@
   font-weight: 700 !important;
 }
 
-/* Textos dos anos e datas na aba inferior -> Branco para dar destaque */
+/* Textos das datas no eixo inferior (Roxo escuro para leitura no fundo branco) */
 .tl-timeline .tl-timenav .tl-timeinterval-major,
 .tl-timeline .tl-timenav .tl-timeinterval-minor,
 .tl-timeline .tl-timenav .tl-timeaxis-tick {
+  color: #782a90 !important;
+}
+
+/* 3. EFEITO HOVER ROXO NOS ITENS/MARCADORES */
+
+/* Ao passar o mouse por cima de um bloco de evento */
+.tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container {
+  background-color: #782a90 !important;
+  border-color: #f58220 !important; /* Borda em Laranja no hover */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Texto dentro do bloco fica branco no hover para dar leitura */
+.tl-timeline .tl-timenav .tl-marker:hover .tl-headline,
+.tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container * {
   color: #ffffff !important;
 }
 
-/* Marcadores de eventos -> Laranja (#f58220) */
-.tl-timeline .tl-timenav .tl-marker .tl-marker-content-container {
+/* Marcador ativo/selecionado (em Laranja permanente) */
+.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
+  background-color: #f58220 !important;
   border-color: #f58220 !important;
 }
 
-/* Marcador ativo/selecionado -> Laranja (#f58220) */
-.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
-  background-color: #f58220 !important;
+.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-headline {
+  color: #ffffff !important;
 }
