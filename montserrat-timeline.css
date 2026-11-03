@@ -27,10 +27,36 @@
   font-family: 'tl-icons' !important;
 }
 
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
-  color: black!important;
+/* Estado padrão dos itens (Fundo Lilás e Texto Preto) */
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #dfcce4 !important;
 }
 
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
-  background-color: #dfcce4!important;
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #000000 !important;
+}
+
+/* 2. ITEM EM HOVER (Passar o mouse) -> Fundo Roxo e Texto Branco */
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #782a90 !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #ffffff !important;
+}
+
+/* 3. ITEM ATIVO (Selecionado) -> Fundo Roxo e Texto Branco */
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #782a90 !important;
+}
+
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content *,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #ffffff !important;
 }
