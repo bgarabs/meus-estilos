@@ -89,13 +89,10 @@
   background-color: #f58220 !important;
 }
 
-/* Força um espaçamento horizontal mínimo entre cada bloco de evento */
-.tl-timeline .tl-timenav .tl-marker {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
+  color: black;
 }
 
-/* Aumenta a largura mínima dos cards de texto dos eventos */
-.tl-timeline .tl-timenav .tl-marker .tl-marker-content-container {
-  min-width: 140px !important;
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #dfcce4;
 }
