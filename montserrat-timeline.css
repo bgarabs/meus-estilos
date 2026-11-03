@@ -27,72 +27,10 @@
   font-family: 'tl-icons' !important;
 }
 
-/* 2. TODAS AS ABAS E PAINEIS DE NAVEGAÇÃO COM FUNDO BRANCO */
-.tl-timeline .tl-timenav,
-.tl-timeline .tl-timenav-background,
-.tl-timeline .tl-timenav-slider,
-.tl-timeline .tl-timenav .tl-timegroup {
-  background-color: #ffffff !important;
-}
-
-/* Texto dos grupos (ex: Diretores) e datas em Roxo para legibilidade */
-.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message,
-.tl-timeline .tl-timenav .tl-timeinterval-major,
-.tl-timeline .tl-timenav .tl-timeinterval-minor,
-.tl-timeline .tl-timenav .tl-timeaxis-tick {
-  color: #782a90 !important;
-}
-
-/* 3. COMPORTAMENTO DOS ITENS (HOVER E ATIVO) */
-
-/* Item ao passar o mouse (Hover) -> Fundo Roxo com texto Branco */
-.tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container {
-  background-color: #782a90 !important;
-  border-color: #782a90 !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.tl-timeline .tl-timenav .tl-marker:hover .tl-headline,
-.tl-timeline .tl-timenav .tl-marker:hover .tl-marker-content-container * {
-  color: #ffffff !important;
-}
-
-/* Item Ativo (Selecionado) -> Fundo Lilás com texto Roxo */
-.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
-  background-color: #dfcce4 !important;
-  border-color: #782a90 !important;
-}
-
-.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-headline,
-.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container * {
-  color: #782a90 !important;
-  font-weight: 700 !important;
-}
-
-/* 4. COR DA LINHA DO TEMPO E DAS BOLINHAS (EIXO DOS ANOS) -> LARANJA */
-
-/* A barra horizontal do eixo principal */
-.tl-timeline .tl-timenav .tl-timeaxis-background,
-.tl-timeline .tl-timenav .tl-timeaxis {
-  background-color: #f58220 !important;
-}
-
-/* As bolinhas (marcadores de ticks) no eixo dos anos */
-.tl-timeline .tl-timenav .tl-timeaxis-tick:after,
-.tl-timeline .tl-timenav .tl-timeaxis-mark {
-  background-color: #f58220 !important;
-}
-
-/* Marcação de tempo/linhas divisórias no eixo */
-.tl-timeline .tl-timenav .tl-timeaxis-major .tl-timeaxis-tick:before,
-.tl-timeline .tl-timenav .tl-timeaxis-minor .tl-timeaxis-tick:before {
-  background-color: #f58220 !important;
-}
-
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
-  color: black;
+  color: black!important;
 }
 
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
-  background-color: #dfcce4;
+  background-color: #dfcce4!important;
 }
