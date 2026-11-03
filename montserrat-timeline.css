@@ -1,10 +1,13 @@
+CSS
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Aplica Montserrat a toda a estrutura do TimelineJS */
-.tl-timeline, 
-.tl-timeline *, 
-.tl-headline, 
-.tl-text-content, 
-.tl-text {
+/* Aplica Montserrat especificamente aos textos e títulos */
+.tl-timeline .tl-headline, 
+.tl-timeline .tl-text,
+.tl-timeline .tl-text-content,
+.tl-timeline .tl-headline-title,
+.tl-timeline .tl-timenav .tl-timegroup-message,
+.tl-timeline .tl-caption,
+.tl-timeline .tl-credit {
   font-family: 'Montserrat', sans-serif !important;
 }
