@@ -1,7 +1,6 @@
-CSS
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Aplica Montserrat especificamente aos textos e títulos */
+/* Aplica Montserrat aos textos e títulos */
 .tl-timeline .tl-headline, 
 .tl-timeline .tl-text,
 .tl-timeline .tl-text-content,
@@ -10,4 +9,35 @@ CSS
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit {
   font-family: 'Montserrat', sans-serif !important;
+}
+
+/* 1. ABA SUPERIOR (Diretores) -> Suave / Menos destaque (Lilás) */
+.tl-timeline .tl-timenav .tl-timegroup {
+  background-color: #dfcce4 !important;
+}
+
+.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
+  color: #782a90 !important; /* Texto em Roxo escuro para bom contraste */
+  font-weight: 600 !important;
+}
+
+/* 2. ABA INFERIOR (Linha de anos/eventos) -> Maior destaque (Roxo principal e Laranja) */
+.tl-timeline .tl-timenav .tl-timeera {
+  background-color: #782a90 !important; /* Fundo Roxo com alto destaque */
+}
+
+/* Texto dos anos na aba inferior */
+.tl-timeline .tl-timenav .tl-timeinterval-major,
+.tl-timeline .tl-timenav .tl-timeinterval-minor {
+  color: #ffffff !important;
+}
+
+/* Marcadores e detalhes de eventos em Laranja */
+.tl-timeline .tl-timenav .tl-marker .tl-marker-content-container {
+  border-color: #f58220 !important;
+}
+
+/* Marcador selecionado ou ativo */
+.tl-timeline .tl-timenav .tl-marker.tl-headline-active .tl-marker-content-container {
+  background-color: #f58220 !important;
 }
