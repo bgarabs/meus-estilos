@@ -74,3 +74,16 @@
 .tl-timegroup:last-child {
   background-color: #f5eff6 !important;
 }
+
+/* Ajusta mídias e vídeos responsivos em telas pequenas */
+@media (max-width: 768px) {
+  .tl-media, 
+  .tl-media-shadow,
+  .tl-media-twitter,
+  .tl-media-youtube,
+  .tl-media-vimeo,
+  .tl-media iframe {
+    max-width: 100% !important;
+    max-height: 250px !important;
+  }
+}
