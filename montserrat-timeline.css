@@ -41,31 +41,30 @@
    2. REGRAS DE CORES DAS LINHAS E GRUPOS
    ========================================================================== */
 
-/* Fundo geral da barra inferior */
+/* Fundo geral de toda a área de navegação (Tudo Branco por padrão) */
 .tl-timeline .tl-timenav,
-.tl-timeline .tl-timenav-slider {
+.tl-timeline .tl-timenav-background,
+.tl-timeline .tl-timenav-slider,
+.tl-timeline .tl-timenav .tl-timeera,
+.tl-timeline .tl-timenav .tl-timeera-background {
   background-color: #ffffff !important;
+  opacity: 1 !important;
 }
 
-/* Apenas a 1ª linha (Aba/Grupo Diretores) -> FUNDO BRANCO */
+/* ABA DOS DIRETORES -> Exclusivamente em Lilás com texto discreto */
 .tl-timeline .tl-timenav .tl-timegroup,
 .tl-timeline .tl-timenav .tl-timegroup-background {
-  background-color: #ffffff !important;
+  background-color: #dfcce4 !important;
   opacity: 1 !important;
+  height: 36px !important;
 }
 
+/* Texto "Diretores" -> Menor (12px), Roxo, Sem Bold (font-weight: 400) */
 .tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
-  color: #782a90 !important; /* Texto dos Diretores em Roxo */
-  font-weight: 700 !important;
-}
-
-/* TODAS as linhas de eventos abaixo (Eras/Backgrounds) -> FUNDO LILÁS */
-.tl-timeline .tl-timenav .tl-timenav-background,
-.tl-timeline .tl-timenav .tl-timeera,
-.tl-timeline .tl-timenav .tl-timeera-background,
-.tl-timeline .tl-timenav .tl-timeera-tick {
-  background-color: #f5eff6 !important;
-  opacity: 1 !important;
+  color: #782a90 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
 }
 
 .tl-timeline .tl-timenav .tl-timegroup-tick {
@@ -76,39 +75,4 @@
    3. ESTADO DOS MARCADORES DE EVENTO (HOVER E ATIVO)
    ========================================================================== */
 
-/* Estado Padrão dos Cards -> Fundo Lilás e Texto Preto */
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
-  background-color: #dfcce4 !important;
-}
-
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content * {
-  color: #000000 !important;
-}
-
-/* Hover (Mouse em cima) -> Fundo Roxo e Texto Branco */
-.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
-  background-color: #782a90 !important;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
-.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content * {
-  color: #ffffff !important;
-}
-
-/* Ativo (Selecionado) -> Fundo Roxo e Texto Branco */
-.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content,
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content {
-  background-color: #782a90 !important;
-}
-
-.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
-.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content *,
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
-  color: #ffffff !important;
-}
-
-/* Cor da barra dos anos -> Laranja */
-.tl-timeline .tl-timenav .tl-time
+/* Estado Padrão dos Cards -> Fundo
