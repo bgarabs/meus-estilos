@@ -108,12 +108,6 @@
   color: #ffffff !important;
 }
 
-/* Cor da barra dos anos -> Laranja */
-.tl-timeline .tl-timenav .tl-timeaxis-background,
-.tl-timeline .tl-timenav .tl-timeaxis {
-  background-color: #f58220 !important;
-}
-
 /* ==========================================================================
    4. RESPONSIVO PARA CELULAR
    ========================================================================== */
