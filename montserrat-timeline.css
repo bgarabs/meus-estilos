@@ -87,3 +87,18 @@
     max-height: 250px !important;
   }
 }
+
+/* 1. DEFINE ALTURA FIXA PARA A FAIXA DOS GRUPOS (DIRETORES) */
+.tl-timeline .tl-timenav .tl-timegroup {
+  height: 40px !important;
+}
+
+/* 2. FORÇA OS MARCADORES NORMAIS A COMECAR ABAIXO DA LINHA DOS DIRETORES */
+.tl-timeline .tl-timenav .tl-marker:not(.tl-timegroup) {
+  margin-top: 5px !important;
+}
+
+/* 3. EVITA SOBREPOSIÇÃO DE CAMADAS DA FAIXA DE GRUPOS */
+.tl-timeline .tl-timenav .tl-timegroup-tick {
+  background-color: transparent !important;
+}
