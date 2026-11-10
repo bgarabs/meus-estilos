@@ -59,12 +59,9 @@
   height: 36px !important;
 }
 
-/* Texto "Diretores" -> Menor (12px), Roxo, Sem Bold (font-weight: 400) */
+/* Texto "Diretores" */
 .tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
-  color: #782a90 !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  text-transform: capitalize !important;
+  font-size: 10px !important;
 }
 
 .tl-timeline .tl-timenav .tl-timegroup-tick {
