@@ -153,3 +153,12 @@ tl-storyslider {
     max-height: 250px !important;
   }
 }
+
+@media (max-width: 768px) {
+  /* Força maior distância entre os anos/marcadores em telas pequenas */
+  .tl-timeline .tl-timenav .tl-marker {
+    min-width: 160px !important; /* Aumente este valor para afastar ainda mais */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
