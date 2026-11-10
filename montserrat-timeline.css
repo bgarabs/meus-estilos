@@ -108,6 +108,10 @@
   color: #ffffff !important;
 }
 
+.tl-timegroup.tl-timegroup-alternate {
+   background-color: #dfcce4;
+}
+
 /* ==========================================================================
    4. RESPONSIVO PARA CELULAR
    ========================================================================== */
