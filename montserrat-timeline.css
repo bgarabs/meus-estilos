@@ -54,12 +54,17 @@
 /* ABA DOS DIRETORES -> Exclusivamente em Lilás com texto discreto */
 .tl-timeline .tl-timenav .tl-timegroup,
 .tl-timeline .tl-timenav .tl-timegroup-background {
+  background-color: #dfcce4 !important;
+  opacity: 1 !important;
   height: 36px !important;
 }
 
-/* Texto "Diretores" */
+/* Texto "Diretores" -> Menor (12px), Roxo, Sem Bold (font-weight: 400) */
 .tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
-  font-size: 10px !important;
+  color: #782a90 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
 }
 
 .tl-timeline .tl-timenav .tl-timegroup-tick {
@@ -70,4 +75,68 @@
    3. ESTADO DOS MARCADORES DE EVENTO (HOVER E ATIVO)
    ========================================================================== */
 
-/* Estado Padrão dos Cards -> Fundo
+/* Estado Padrão dos Cards -> Fundo Lilás e Texto Preto */
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #dfcce4 !important;
+}
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #000000 !important;
+}
+
+/* Hover (Mouse em cima) -> Fundo Roxo e Texto Branco */
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #782a90 !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #ffffff !important;
+}
+
+/* Ativo (Selecionado) -> Fundo Roxo e Texto Branco */
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content {
+  background-color: #782a90 !important;
+}
+
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content *,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #ffffff !important;
+}
+
+/* Cor da barra dos anos -> Laranja */
+.tl-timeline .tl-timenav .tl-timeaxis-background,
+.tl-timeline .tl-timenav .tl-timeaxis {
+  background-color: #f58220 !important;
+}
+
+.tl-timeline .tl-timenav .tl-timeaxis-tick:after,
+.tl-timeline .tl-timenav .tl-timeaxis-mark {
+  background-color: #f58220 !important;
+}
+
+/* ==========================================================================
+   4. RESPONSIVO PARA CELULAR
+   ========================================================================== */
+@media (max-width: 768px) {
+  .tl-media, 
+  .tl-media-shadow,
+  .tl-media-twitter,
+  .tl-media-youtube,
+  .tl-media-vimeo,
+  .tl-media iframe {
+    max-width: 100% !important;
+    max-height: 230px !important;
+  }
+
+  .tl-timeline .tl-timenav .tl-marker {
+    min-width: 110px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
