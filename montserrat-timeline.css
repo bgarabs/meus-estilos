@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* 1. TIPOGRAFIA MONTSERRAT EM TODOS OS TEXTOS (Sem afetar ícones) */
+/* ==========================================================================
+   1. TIPOGRAFIA MONTSERRAT (Sem quebrar os ícones)
+   ========================================================================== */
 .tl-timeline,
 .tl-timeline .tl-headline,
 .tl-timeline .tl-headline-title,
@@ -19,7 +21,7 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Preserva a fonte dos ícones (setas laterais, botões de zoom, etc.) */
+/* Preserva os ícones nativos (setas laterais, botões de zoom) */
 .tl-timeline .tl-icon,
 .tl-timeline [class^="tl-icon-"],
 .tl-timeline [class*=" tl-icon-"],
@@ -29,14 +31,49 @@
   font-family: 'tl-icons' !important;
 }
 
-/* Cor base dos textos de apoio (preto) */
+/* Cor base dos textos de apoio */
 .tl-timeline .tl-text,
 .tl-timeline .tl-slidenav-title,
 .tl-timeline .tl-slidenav-description {
   color: #000000 !important;
 }
 
-/* 2. ESTADO PADRÃO DOS ITENS (Fundo Lilás e Texto Preto) */
+/* ==========================================================================
+   2. UNIFORMIZAÇÃO DE FUNDO DA FAIXA DOS GRUPOS E ERAS (ELIMINA O CINZA)
+   ========================================================================== */
+.tl-timeline .tl-timenav,
+.tl-timeline .tl-timenav-background,
+.tl-timeline .tl-timenav-slider {
+  background-color: #ffffff !important;
+}
+
+/* Força o lilás contínuo na faixa superior (Diretores), sem alternar para cinza */
+.tl-timeline .tl-timenav .tl-timegroup,
+.tl-timeline .tl-timenav .tl-timeera,
+.tl-timeline .tl-timenav .tl-timeera-background,
+.tl-timeline .tl-timenav .tl-timegroup-background {
+  background-color: #f5eff6 !important;
+  opacity: 1 !important;
+}
+
+.tl-timeline .tl-timenav .tl-timegroup {
+  height: 40px !important;
+}
+
+.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
+  color: #782a90 !important;
+  font-weight: 700 !important;
+}
+
+.tl-timeline .tl-timenav .tl-timegroup-tick {
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   3. ESTADO E CORES DOS MARCADORES DE EVENTO
+   ========================================================================== */
+
+/* Padrão -> Fundo Lilás e Texto Preto */
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #dfcce4 !important;
 }
@@ -46,7 +83,7 @@
   color: #000000 !important;
 }
 
-/* 3. ITEM EM HOVER (Passar o mouse) -> Fundo Roxo e Texto Branco */
+/* Hover (Passar o mouse) -> Fundo Roxo e Texto Branco */
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #782a90 !important;
   transition: background-color 0.2s ease-in-out;
@@ -57,7 +94,7 @@
   color: #ffffff !important;
 }
 
-/* 4. ITEM ATIVO (Selecionado) -> Fundo Roxo e Texto Branco */
+/* Ativo (Selecionado) -> Fundo Roxo e Texto Branco */
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content,
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #782a90 !important;
@@ -65,40 +102,3 @@
 
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content *,
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
-  color: #ffffff !important;
-}
-
-/* Fundo suave na aba de grupos superior */
-.tl-timegroup:last-child {
-  background-color: #f5eff6 !important;
-}
-
-/* Ajusta mídias e vídeos responsivos em telas pequenas */
-@media (max-width: 768px) {
-  .tl-media, 
-  .tl-media-shadow,
-  .tl-media-twitter,
-  .tl-media-youtube,
-  .tl-media-vimeo,
-  .tl-media iframe {
-    max-width: 100% !important;
-    max-height: 250px !important;
-  }
-}
-
-/* 1. DEFINE ALTURA FIXA PARA A FAIXA DOS GRUPOS (DIRETORES) */
-.tl-timeline .tl-timenav .tl-timegroup {
-  height: 40px !important;
-}
-
-/* 2. FORÇA OS MARCADORES NORMAIS A COMECAR ABAIXO DA LINHA DOS DIRETORES */
-.tl-timeline .tl-timenav .tl-marker:not(.tl-timegroup) {
-  margin-top: 5px !important;
-}
-
-/* 3. EVITA SOBREPOSIÇÃO DE CAMADAS DA FAIXA DE GRUPOS */
-.tl-timeline .tl-timenav .tl-timegroup-tick {
-  background-color: transparent !important;
-}
