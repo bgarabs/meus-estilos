@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 /* ==========================================================================
-   1. TIPOGRAFIA MONTSERRAT (Sem quebrar os ícones)
+   1. TIPOGRAFIA MONTSERRAT
    ========================================================================== */
 .tl-timeline,
 .tl-timeline .tl-headline,
@@ -21,7 +21,7 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Preserva os ícones nativos (setas laterais, botões de zoom) */
+/* Preserva os ícones nativos */
 .tl-timeline .tl-icon,
 .tl-timeline [class^="tl-icon-"],
 .tl-timeline [class*=" tl-icon-"],
@@ -31,7 +31,6 @@
   font-family: 'tl-icons' !important;
 }
 
-/* Cor base dos textos de apoio */
 .tl-timeline .tl-text,
 .tl-timeline .tl-slidenav-title,
 .tl-timeline .tl-slidenav-description {
@@ -39,30 +38,34 @@
 }
 
 /* ==========================================================================
-   2. UNIFORMIZAÇÃO DE FUNDO DA FAIXA DOS GRUPOS E ERAS (ELIMINA O CINZA)
+   2. REGRAS DE CORES DAS LINHAS E GRUPOS
    ========================================================================== */
+
+/* Fundo geral da barra inferior */
 .tl-timeline .tl-timenav,
-.tl-timeline .tl-timenav-background,
 .tl-timeline .tl-timenav-slider {
   background-color: #ffffff !important;
 }
 
-/* Força o lilás contínuo na faixa superior (Diretores), sem alternar para cinza */
+/* Apenas a 1ª linha (Aba/Grupo Diretores) -> FUNDO BRANCO */
 .tl-timeline .tl-timenav .tl-timegroup,
-.tl-timeline .tl-timenav .tl-timeera,
-.tl-timeline .tl-timenav .tl-timeera-background,
 .tl-timeline .tl-timenav .tl-timegroup-background {
-  background-color: #f5eff6 !important;
+  background-color: #ffffff !important;
   opacity: 1 !important;
 }
 
-.tl-timeline .tl-timenav .tl-timegroup {
-  height: 40px !important;
+.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
+  color: #782a90 !important; /* Texto dos Diretores em Roxo */
+  font-weight: 700 !important;
 }
 
-.tl-timeline .tl-timenav .tl-timegroup .tl-timegroup-message {
-  color: #782a90 !important;
-  font-weight: 700 !important;
+/* TODAS as linhas de eventos abaixo (Eras/Backgrounds) -> FUNDO LILÁS */
+.tl-timeline .tl-timenav .tl-timenav-background,
+.tl-timeline .tl-timenav .tl-timeera,
+.tl-timeline .tl-timenav .tl-timeera-background,
+.tl-timeline .tl-timenav .tl-timeera-tick {
+  background-color: #f5eff6 !important;
+  opacity: 1 !important;
 }
 
 .tl-timeline .tl-timenav .tl-timegroup-tick {
@@ -70,10 +73,10 @@
 }
 
 /* ==========================================================================
-   3. ESTADO E CORES DOS MARCADORES DE EVENTO
+   3. ESTADO DOS MARCADORES DE EVENTO (HOVER E ATIVO)
    ========================================================================== */
 
-/* Padrão -> Fundo Lilás e Texto Preto */
+/* Estado Padrão dos Cards -> Fundo Lilás e Texto Preto */
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #dfcce4 !important;
 }
@@ -83,7 +86,7 @@
   color: #000000 !important;
 }
 
-/* Hover (Passar o mouse) -> Fundo Roxo e Texto Branco */
+/* Hover (Mouse em cima) -> Fundo Roxo e Texto Branco */
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content {
   background-color: #782a90 !important;
   transition: background-color 0.2s ease-in-out;
@@ -102,3 +105,10 @@
 
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
 .tl-timemarker.tl-headline-active .tl-timemarker-content-container .tl-timemarker-content *,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content * {
+  color: #ffffff !important;
+}
+
+/* Cor da barra dos anos -> Laranja */
+.tl-timeline .tl-timenav .tl-time
