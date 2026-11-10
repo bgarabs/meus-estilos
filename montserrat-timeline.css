@@ -54,7 +54,6 @@
 /* ABA DOS DIRETORES -> Exclusivamente em Lilás com texto discreto */
 .tl-timeline .tl-timenav .tl-timegroup,
 .tl-timeline .tl-timenav .tl-timegroup-background {
-  background-color: #dfcce4 !important;
   opacity: 1 !important;
   height: 36px !important;
 }
