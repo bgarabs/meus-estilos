@@ -109,7 +109,11 @@
 }
 
 .tl-timegroup.tl-timegroup-alternate {
-   background-color: #dfcce4;
+   background-color: #dfcce4!important;
+}
+
+.tl-timegroup {
+   background-color: transparent!important;
 }
 
 /* ==========================================================================
